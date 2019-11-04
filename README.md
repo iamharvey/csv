@@ -8,6 +8,8 @@
 - retrieves a single column or cols
 - retrieves a slice of data by specifiying both the row range and column indices
 
+<br>
+
 ## Example
 
 ### Read a CSV file, header skipped
@@ -64,6 +66,8 @@ if err != nil {
 }
 data := reader.Slice(2, 4, "date", "time-of-last-meal")
 ```
+
+<br>
 
 ## Benchmark
 Task | Rounds | Speed | Mem Alloc | Allocs 
