@@ -1,4 +1,4 @@
-![Go report](https://goreportcard.com/badge/github.com/iamharvey/csv)
+![](https://github.com/iamharvey/csv/workflows/Go/badge.svg) ![Go report](https://goreportcard.com/badge/github.com/iamharvey/csv)
 
 # csv - A package reads and processes data from a CSV file
 
