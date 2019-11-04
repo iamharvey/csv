@@ -1,17 +1,12 @@
 ![](https://github.com/iamharvey/csv/workflows/Go/badge.svg) ![Go report](https://goreportcard.com/badge/github.com/iamharvey/csv)
 
-# csv - A package reads and processes data from a CSV file
+# csv - A package reads and slices data from a CSV file
 
 ## Features
 - reads a csv with or without skipping header
 - retrieves a single row or rows
 - retrieves a single column or cols
 - retrieves a slice of data by specifiying both the row range and column indices
-
-## TO-DO
-- Benchmark test
-- Automatical convert numeric value to (int or float)
-- Sort data by columns
 
 ## Example
 
