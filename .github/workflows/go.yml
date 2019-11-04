@@ -18,6 +18,3 @@ jobs:
 
     - name: Test
       run: go test -v .
-    
-    - name: Godacov Report
-      uses: brpaz/godacov-action@v1.0.3
