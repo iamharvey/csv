@@ -64,3 +64,8 @@ if err != nil {
 }
 data := reader.Slice(2, 4, "date", "time-of-last-meal")
 ```
+
+## Benchmark
+Task | Rounds | Speed | Mem Alloc | Allocs 
+  --- | --- | --- | --- | --- 
+| Get column data (random cols) |  980545  |            3710 ns/op   |         2672 B/op   |      54 allocs/op
