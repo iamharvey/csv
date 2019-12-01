@@ -1,6 +1,7 @@
 package csv
 
 import (
+	"math/rand"
 	"reflect"
 	"testing"
 )
@@ -174,6 +175,28 @@ func TestCSVReader_RowNCol_ByNames(t *testing.T) {
 	} else {
 		if !reflect.DeepEqual(expected, actual) {
 			t.Errorf("expected %v but got %v", expected, actual)
+		}
+	}
+}
+
+func BenchmarkReader_Cols(b *testing.B) {
+	var reader Reader
+
+	columns := []string{"date", "weight-in-kg", "time-of-last-meal"}
+	if err := reader.Read("sample/weights.csv", ',', true, columns); err != nil {
+		b.Errorf("error occurs %v", err)
+	}
+
+	for i := 0; i < b.N; i ++ {
+		var col1, col2 int
+		col1 = rand.Intn(2) + 1
+		for col1 == col2 {
+			col2 = rand.Intn(2) + 1
+		}
+
+		_, err := reader.Cols(columns[col1], columns[col2])
+		if err != nil {
+			b.Errorf("error occurs %v", err)
 		}
 	}
 }

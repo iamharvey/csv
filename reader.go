@@ -64,6 +64,10 @@ func (reader *Reader) Read(fileName string, sep rune, skip bool, columns []strin
 	return nil
 }
 
+func (reader *Reader) Data() [][] string {
+	return reader.data
+}
+
 /*
 Row retrieves a single row using row number (starts from 1).
 */
